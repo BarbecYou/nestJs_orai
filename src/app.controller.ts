@@ -7,7 +7,6 @@ export class AppController {
   constructor(private readonly appService: AppService) { }
 
   @Get('/todos')
-  @Render('todos')
   getTodos() {
     const todos = this.appService.getTodos();
     return {
